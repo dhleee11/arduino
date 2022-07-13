@@ -28,7 +28,7 @@ char pass[] = "";                   //집에서 비밀번호 변경
 
 MQ135 mq135_sensor(PIN_MQ135);
 DHT dht(DHTPIN, DHTTYPE);
-//BlynkTimer timer;
+
 int value=0; //섭씨-화씨 변환용 변수
 float temperature, humidity, tc; // Temp and Humid floats, will be measured by the DHT
 
@@ -50,7 +50,6 @@ void setup() {
 void loop() {
 
   Blynk.run();
-//  timer.run();
   
   humidity = dht.readHumidity();
   temperature = dht.readTemperature(value);
